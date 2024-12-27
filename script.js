@@ -8,6 +8,24 @@ const menuBtn = document.querySelector('.menu-btn');
 const navContent = document.querySelector('.nav-content');
 const logoText = document.querySelector('.logo-text');
 
+// CTA Button click handler
+const ctaButton = document.querySelector('.cta-button');
+if (ctaButton) {
+    ctaButton.addEventListener('click', () => {
+        const projectsSection = document.querySelector('#projects');
+        if (projectsSection) {
+            const headerOffset = header.offsetHeight;
+            const targetPosition = projectsSection.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            
+            gsap.to(window, {
+                duration: 1,
+                scrollTo: targetPosition,
+                ease: "power2.inOut"
+            });
+        }
+    });
+}
+
 // Header Scroll Effect
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -65,38 +83,6 @@ gsap.to(logoText, {
     repeat: -1,
     yoyo: true,
     ease: "power1.inOut"
-});
-
-// Custom Cursor
-const cursor = document.querySelector('.cursor');
-const cursorFollower = document.querySelector('.cursor-follower');
-
-document.addEventListener('mousemove', (e) => {
-    gsap.to(cursor, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0
-    });
-    
-    gsap.to(cursorFollower, {
-        x: e.clientX - 20,
-        y: e.clientY - 20,
-        duration: 0.1
-    });
-});
-
-// Hover effect on links and buttons
-const links = document.querySelectorAll('a, button');
-links.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        cursorFollower.style.transform = 'scale(1.5)';
-        cursor.style.opacity = '0';
-    });
-    
-    link.addEventListener('mouseleave', () => {
-        cursorFollower.style.transform = 'scale(1)';
-        cursor.style.opacity = '1';
-    });
 });
 
 // Loading Animation
@@ -349,3 +335,43 @@ document.querySelector('.email-link').addEventListener('click', function(e) {
     // Remove tooltip after animation
     setTimeout(() => tooltip.remove(), 2000);
 });
+
+// Contact Form Handler
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const originalBtnText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        try {
+            const formData = new FormData(contactForm);
+            const searchParams = new URLSearchParams();
+
+            // Convert FormData to URLSearchParams
+            for (const [key, value] of formData) {
+                searchParams.append(key, value);
+            }
+
+            const response = await fetch('https://script.google.com/macros/s/AKfycbxRqoplK1yceUaNj3OIvEu4ynm4c37YNyCoNDBrUAn6VvKThLVVzyWG5A53L1F34Zce/exec', {
+                method: 'POST',
+                body: searchParams,
+                mode: 'no-cors'
+            });
+
+            // Show success message
+            alert('Thank you! Your message has been sent successfully.');
+            contactForm.reset();
+            
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Sorry, there was an error sending your message. Please try again or contact me directly via email.');
+        } finally {
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
+        }
+    });
+}

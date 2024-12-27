@@ -10,7 +10,12 @@ body {
     background: #0a0a0a;
     color: #fff;
     overflow-x: hidden;
-    cursor: none;
+}
+
+/* Add normal cursor for interactive elements */
+a, button, .nav-link, .logo, .menu-btn, 
+[role="button"], [type="button"], [type="submit"] {
+    cursor: pointer;
 }
 
 /* Header Styles */
@@ -194,28 +199,6 @@ body {
     .menu-btn.active .bar:nth-child(3) {
         transform: rotate(-45deg) translate(8px, -6px);
     }
-}
-
-/* Custom Cursor */
-.cursor {
-    width: 8px;
-    height: 8px;
-    background: #fff;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-}
-
-.cursor-follower {
-    width: 40px;
-    height: 40px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s;
 }
 
 /* Loading Screen */
@@ -518,18 +501,35 @@ h2 {
     gap: 2rem;
 }
 
-.cta-primary, .cta-secondary {
-    padding: 1rem 2.5rem;
-    border-radius: 8px;
-    font-weight: 500;
+.cta-button {
+    background: linear-gradient(45deg, #00fffc, #00a8a6);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
     font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 2rem;
     transition: all 0.3s ease;
-    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 255, 252, 0.2);
+    position: relative;
+    overflow: hidden;
 }
 
-.cta-primary {
-    background: #00fffc;
-    color: #000;
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 252, 0.3);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .cta-button {
+        padding: 0.8rem 1.6rem;
+        font-size: 1rem;
+    }
 }
 
 .cta-secondary {
@@ -538,7 +538,7 @@ h2 {
     color: #00fffc;
 }
 
-.cta-primary:hover, .cta-secondary:hover {
+.cta-secondary:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 255, 252, 0.2);
 }
