@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adwait's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="counter">0%</div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-text">A</span>
+                    <div class="logo-full">Adwait's Portfolio</div>
+                </div>
+                <div class="nav-content">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="nav-link"><span>Home</span></a></li>
+                        <li><a href="#about" class="nav-link"><span>About</span></a></li>
+                        <li><a href="#projects" class="nav-link"><span>Projects</span></a></li>
+                        <li><a href="#services" class="nav-link"><span>Services</span></a></li>
+                        <li><a href="#achievements" class="nav-link"><span>Achievements</span></a></li>
+                    </ul>
+                    <a href="#contact" class="contact-btn">Let's Talk</a>
+                </div>
+                <div class="menu-btn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with 3D Animation -->
+    <section id="home" class="hero">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="Adwait Keshari">Adwait Keshari</h1>
+            <p class="hero-subtitle">Web3 Developer & Freelance Expert</p>
+            <p class="hero-description">IIT Madras Student | Full-Stack Developer | Web3 Enthusiast</p>
+            <button class="cta-button">Explore My Work</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="professional-summary">A dedicated and ambitious individual with a strong background in technology and Web3 development. Currently pursuing my education at the Indian Institute of Technology Madras (IIT Madras), I'm passionate about blockchain technology and creating decentralized solutions. As a freelance developer, I specialize in building modern web applications and Web3 integrations.</p>
+                
+                <!-- Skills Section -->
+                <div class="skills-section">
+                    <div class="section-title">
+                        <h3>What I do</h3>
+                    </div>
+                    <div class="skills-container">
+                        <div class="skill-box">
+                            <div class="skill-title">
+                                <div class="skill-img">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3>Web Development</h3>
+                            </div>
+                            <p>Building responsive and dynamic websites using modern technologies</p>
+                        </div>
+                        
+                        <div class="skill-box">
+                            <div class="skill-title">
+                                <div class="skill-img">
+                                    <i class="fas fa-cube"></i>
+                                </div>
+                                <h3>Web3 Development</h3>
+                            </div>
+                            <p>Creating decentralized applications and smart contracts</p>
+                        </div>
+                        
+                        <div class="skill-box">
+                            <div class="skill-title">
+                                <div class="skill-img">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h3>Backend Development</h3>
+                            </div>
+                            <p>Developing robust server-side applications and APIs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies Section -->
+                <div class="technologies-section">
+                    <div class="section-title">
+                        <h3>Technologies I Use</h3>
+                    </div>
+                    <div class="tech-container">
+                        <div class="tech-category">
+                            <h4>Programming Languages</h4>
+                            <div class="tech-list">
+                                <span>JavaScript</span>
+                                <span>Python</span>
+                                <span>C++</span>
+                                <span>Solidity</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Frameworks & Libraries</h4>
+                            <div class="tech-list">
+                                <span>React.js</span>
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>Web3.js</span>
+                                <span>Three.js</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <h4>Tools & Platforms</h4>
+                            <div class="tech-list">
+                                <span>Git</span>
+                                <span>VS Code</span>
+                                <span>MongoDB</span>
+                                <span>Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hire Me Section -->
+                <div class="hire-me-section">
+                    <h3>Let's Work Together</h3>
+                    <p>Available for freelance projects and collaborations</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="cta-primary">Get in Touch</a>
+                        <a href="#" class="cta-secondary">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h3>Projects & Experience</h3>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>Election Data Scraping and Analysis</h4>
+                            <span class="project-role">Developer</span>
+                        </div>
+                        <p>Developed a comprehensive tool to scrape and analyze election data, providing valuable insights into voting patterns and trends. This project enhanced skills in data extraction, cleaning, and visualization.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Data Analysis</span>
+                            <span>Web Scraping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>House Rent Data Proposal</h4>
+                            <span class="project-role">Analyst</span>
+                        </div>
+                        <p>Created a detailed proposal analyzing house rent data to identify market trends and pricing strategies. This work involved statistical analysis and data-driven decision-making.</p>
+                        <div class="project-tags">
+                            <span>Data Analysis</span>
+                            <span>Statistics</span>
+                            <span>Market Research</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>Sahyog Club Workshops</h4>
+                            <span class="project-role">Organizer</span>
+                        </div>
+                        <p>Actively organized and contributed to workshops and events under IIT Madras's Sahyog Club, demonstrating leadership and collaborative skills in educational initiatives.</p>
+                        <div class="project-tags">
+                            <span>Leadership</span>
+                            <span>Event Management</span>
+                            <span>Education</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h4>IIT Madras BDM Capstone</h4>
+                            <span class="project-role">Team Member</span>
+                        </div>
+                        <p>Successfully completed a capstone project addressing specific challenges in Business Data Management, applying theoretical knowledge to practical scenarios.</p>
+                        <div class="project-tags">
+                            <span>Business Analytics</span>
+                            <span>Data Management</span>
+                            <span>Team Work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Freelance Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-globe"></i>
+                <h3>Web Development</h3>
+                <p>Custom websites, portfolios, and web applications built with modern technologies</p>
+                <ul class="service-features">
+                    <li>Responsive Design</li>
+                    <li>Modern UI/UX</li>
+                    <li>SEO Optimization</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cube"></i>
+                <h3>Web3 Development</h3>
+                <p>Smart contracts, DApps, and blockchain integration services</p>
+                <ul class="service-features">
+                    <li>Smart Contracts</li>
+                    <li>DApp Development</li>
+                    <li>Token Integration</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Custom Development</h3>
+                <p>Tailored solutions for your specific needs</p>
+                <ul class="service-features">
+                    <li>Full-Stack Development</li>
+                    <li>API Integration</li>
+                    <li>Technical Consulting</li>
+                </ul>
+            </div>
+        </div>
+        <div class="hire-me">
+            <h3>Ready to Start Your Project?</h3>
+            <p>I'm available for freelance projects and collaborations</p>
+            <button class="hire-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Hire Me</button>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <h2>Achievements & Certifications</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <i class="fas fa-award"></i>
+                <h3>IIT Madras BDM Capstone Project</h3>
+                <p>Successfully completed the capstone project demonstrating applied knowledge</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-users"></i>
+                <h3>Sahyog Club Leadership</h3>
+                <p>Led workshops and events at IITM's Sahyog Club</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-cube"></i>
+                <h3>Web3 Innovation</h3>
+                <p>Actively developing decentralized applications and smart contracts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Tell me about your project" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <span class="logo-text">A</span>
+                    <span class="footer-name">Adwait Keshari</span>
+                </div>
+                <p class="footer-tagline">Web3 Developer & Freelance Expert</p>
+            </div>
+            <div class="footer-center">
+                <h4>Quick Links</h4>
+                <nav class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#services">Services</a>
+                    <a href="#achievements">Achievements</a>
+                </nav>
+            </div>
+            <div class="footer-right">
+                <h4>Contact Me</h4>
+                <div class="contact-info">
+                    <a href="mailto:adwaitkeshari288@gmail.com" class="email-link">
+                        <i class="fas fa-envelope"></i>
+                        adwaitkeshari288@gmail.com
+                    </a>
+                    <div class="social-links">
+                        <a href="https://github.com/Adwaitbytes" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/adwait-keshari-b5793b294" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/AdwaitKeshari" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Adwait Keshari. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollToPlugin.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
