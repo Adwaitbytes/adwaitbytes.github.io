@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://adwaitbytes.github.io/sitemap.xml
