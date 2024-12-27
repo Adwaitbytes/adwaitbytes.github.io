@@ -356,9 +356,10 @@ h2 {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
+    width: 100px;
+    height: 4px;
     background: #00fffc;
+    animation: glowPulse 2s infinite;
 }
 
 .skills-container {
@@ -1251,9 +1252,10 @@ button:hover {
     position: absolute;
     bottom: -8px;
     left: 0;
-    width: 40px;
-    height: 3px;
+    width: 100px;
+    height: 4px;
     background: #00fffc;
+    animation: glowPulse 2s infinite;
 }
 
 .skills-container {
@@ -1617,8 +1619,8 @@ button:hover {
     position: absolute;
     left: 50%;
     bottom: 0;
-    width: 80px;
-    height: 3px;
+    width: 100px;
+    height: 4px;
     background: #00fffc;
     transform: translateX(-50%);
     animation: glowPulse 2s infinite;
